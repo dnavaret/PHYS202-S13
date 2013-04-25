@@ -1,0 +1,13 @@
+import numpy as np
+
+def pointPotential(x,y,q,posx,posy):
+    """docstringdoc"""
+    k = 8.9875518*10**9 
+    Vpp = (k*q)/(x**2 + y**2)**(1/2.) 
+    return Vpp 
+
+def dipolePotential(x,y,q,d):
+    """testing docstring, ficks later"""
+    k = 8.9875518*10**9
+    Vdp = (k*q/((x)**2+(y-d)**2)**(1/2.)-(k*q/(x**2+(y + d)**2)**(1/2.)))
+    return Vdp
